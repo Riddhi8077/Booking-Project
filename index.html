@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+        <h1>Internship Project</h1>
+        <nav>
+          <ul>
+            <li><a href="#booking-confirmation">Booking</a></li>
+            <li><a href="#cancellation-refunds">Cancellation</a></li>
+            <li><a href="#loyalty-program">Loyalty Program</a></li>
+          </ul>
+        </nav>
+        <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode </button>
+    </header>
+  <main>
+    <section id="booking-form" class="container">
+        <h2>New Booking</h2>
+        <form id="bookingForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+      
+          <label for="date">Booking Date:</label>
+          <input type="date" id="date" required>
+      
+          <button type="submit">Book Now</button>
+        </form>
+        <p id="booking-status" class="status-message"></p>
+      </section>
+      <section id="booking-confirmation" class="container">
+    <h2>Booking Confirmation</h2>
+    <p><strong>Booking ID:</strong> 123456</p>
+    <p><strong>Dates:</strong> 27-02-2025 to 27-03-2025</p>
+    <p><strong>Price:</strong> $500</p>
+    <p><strong>Cancellation Policy:</strong> 50% refund if canceled within 24 hours.</p>
+    <p><strong>Support Contact:</strong> support@nullclass.com</p>
+    <button onclick="downloadETicket()">Download E-Ticket</button>
+  </section>
+  
+  <!-- Cancellation & Refunds Section -->
+  <section id="cancellation-refunds" class="container">
+    <h2>Cancellation & Refunds</h2>
+    <p><strong>Booking ID:</strong> 123456</p>
+    <p><strong>Price:</strong> $500</p>
+    <label for="reason"><strong>Reason for Cancellation:</strong></label>
+    <select id="reason">
+      <option value="">Select a reason</option>
+      <option value="change-of-plans">Change of Plans</option>
+      <option value="financial-reasons">Financial Reasons</option>
+      <option value="other">Other</option>
+    </select>
+    <button onclick="cancelBooking()">Cancel Booking</button>
+    <p id="refund-status" class="status-message"></p>
+  </section>
+  
+  <!-- Loyalty Program Section -->
+  <section id="loyalty-program" class="container">
+    <h2>Loyalty Program</h2>
+    <p><strong>Points Earned:</strong> 500 points</p>
+    <p><strong>Current Tier:</strong> Silver</p>
+    <p><strong>Exclusive Deals:</strong> 10% off on your next booking!</p>
+    <button onclick="redeemPoints()">Redeem Points</button>
+  </section>
+  </main>
+  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2024 Internship Project. All rights reserved.</p>
+    <p>Contact: support@nullclass.com</p>
+  </footer>
+</body>
+</html>
